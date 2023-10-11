@@ -42,5 +42,7 @@ for ($i = 0; $i < count($studentMarks); $i = $i + 1) {
 echo "</ul>";
 
 
+
+
 echo "waqas";
 ?>

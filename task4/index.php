@@ -23,6 +23,18 @@ $class_fifth_marks = array(
     array(92,46,120)
 );
 
+
+$class_fifth_marks = array(
+    array("one.jpg","News","International news today","Gejrov"),
+    array("nature.jpg","Nature","Nature has its own methods","Gejrov"),
+    array("rain.jpg","Health","Tall people tend to be dumb","Gejrov"),
+    array(75,88,100),
+    array(92,46,120),
+    array(92,46,120)
+);
+
+
+
 for($i=0; $i<count($class_fifth_marks); $i += 1){
     echo '<div class="row">';
         echo '<div class="cell">'.$class_fifth_marks[$i][0].'</div>';
@@ -40,6 +52,8 @@ for($i=0; $i<count($class_fifth_marks); $i += 1){
     echo '</tr>';
 }
 echo "</table>";
+
+
 
 
 // echo $class_fifth_marks[1][2];

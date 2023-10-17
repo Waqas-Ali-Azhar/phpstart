@@ -49,7 +49,8 @@ $header_s = array(
                 'about' => '/phpstart/task7/about-us.php',
                 'services' => '/services.php',
                 'portfolio' => '/portfolio.php',
-                'team'=> 'team.php'
+                'team'=> 'team.php',
+                'students' => 'students.php'
             )
         )
     )    

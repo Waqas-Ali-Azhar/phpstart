@@ -103,9 +103,38 @@
     array_push($stack, "apple", "raspberry");
     print_r($stack);
 
-    echo "Hi i am out of loop";
-    exit;
 
+    //built-in function
+    $stack_length = count($stack);
+
+    echo $stack_length;
+
+    echo "<br>";
+
+    /*
+        User Defined Function
+    */
+
+    /*
+        function call
+    */
+    $check = array(10,30,21,22);
+    count1($check);
+
+    /*
+        Definition of the function
+    */
+    function count1($arr){
+        foreach($arr as $value){
+            print_r($value+5);
+            echo "<br>";
+        }
+    }
+
+
+
+    $newarr = array(0,5,10,15,20);
+    count1($newarr);
 
 
     

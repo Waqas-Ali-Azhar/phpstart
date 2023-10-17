@@ -2,6 +2,9 @@ body {
     margin: 0px;
     padding: 0px;
     clear: both;
+    font-family:
+        "Open Sans",
+        sans-serif
 }
 
 
@@ -76,6 +79,12 @@ body {
          HEADER CSS
 =====================================
 */
+
+header {
+    width: 100%;
+    float: left;
+}
+
 .fa-envelope,
 .fa-mobile {
     color: #5cb874;
@@ -97,4 +106,31 @@ body {
 .linkedin {
     padding: 0px 5px;
     float: right;
+}
+
+.menu-wrapper {
+    text-align: right;
+}
+
+.menu-wrapper ul {
+    list-style-type: none;
+}
+
+.menu-wrapper ul li {
+    display: inline-block;
+}
+
+
+.link {
+    text-decoration: none;
+    padding: 5px 10px;
+    color: black;
+    border-radius: 4px;
+    text-transform: capitalize;
+}
+
+
+#main {
+    min-height: 100vh;
+    background: gray;
 }

@@ -1,5 +1,5 @@
 <?php
-
+    // die();
     include 'header.php';
 
 
@@ -12,6 +12,7 @@
     $conn = new mysqli($servername, $username, $password,$database);
 
 
+
     // Check connection
     if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
@@ -20,17 +21,7 @@
 
         $sql = "SELECT * FROM tbl_student";
         $result = $conn->query($sql);
-
-       
-        
-        
-
-
-
-
-
-
-    }
+     }
 
     ?>
 
@@ -55,13 +46,16 @@ if($result->num_rows > 0){
     while($row = $result->fetch_assoc()){
        ?>   
        <tr>
-            <td><?php echo $row['id'] ?></td>
+            <td style="background-color: yellow;;"><?php echo $row['id'] ?></td>
             <td><?php echo $row['first_name'] ?></td>
             <td><?php echo $row['last_name'] ?></td>
             <td><?php echo $row['gender'] ?></td>
             <td><?php echo $row['address'] ?></td>
             <td><?php echo $row['email'] ?></td>
             <td><?php echo $row['contact'] ?></td>
+            <td>
+                <a href="edit-student.php?id=<?php echo $row['id']; ?>">Edit</a>
+            </td>
        </tr>
 
        <?php

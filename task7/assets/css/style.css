@@ -131,6 +131,78 @@ header {
 
 
 #main {
+    padding: 100px 70px;
     min-height: 100vh;
-    background: gray;
+    background: #95b9e2;
+    float: left;
+    width: 100%;
+}
+
+footer {
+    float: left;
+    width: 100%;
+}
+
+footer ul {
+    list-style-type: none;
+}
+
+footer .col-30.custom-col {
+    width: 33.2%;
+    text-align: center;
+    background-color: rgb(240, 204, 121);
+    padding: 100px 0px;
+    border: 1px solid white;
+}
+
+footer .col-30.custom-col:nth-child(2) {
+    background-color: rgb(230, 183, 73);
+}
+
+footer .col-30.custom-col:nth-child(3) {
+    background-color: rgb(241, 175, 22);
+}
+
+textarea {
+    resize: none;
+}
+
+label {
+    width: 10%;
+    display: inline-block;
+
+}
+
+form {
+    /* width: 60%; */
+    margin: 0 auto;
+}
+
+.fieldgroup {
+    margin: 15px 0px;
+}
+
+.fieldgroup label:nth-child(2),
+.fieldgroup label:nth-child(4) {
+    width: fit-content;
+}
+
+.fieldgroup input+label {
+    width: fit-content;
+}
+
+input[type=text],
+textarea {
+    border-radius: 4px;
+    box-shadow: none;
+    border: 1px solid white;
+}
+
+.btn-update {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    border-radius: 4px;
+    padding: 5px 7px;
+    text-transform: capitalize;
 }

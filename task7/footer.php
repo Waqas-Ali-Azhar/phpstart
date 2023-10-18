@@ -1,39 +1,37 @@
 <footer>
 
-<div class="col-30">
+<div class="col-30 custom-col">
     <ul>
         <li>
-            <a href="">NEW SAMPLE LINK</a>
+            <a href="">Google</a>
         </li>
         <li>
-            <a href="">NEW SAMPLE LINK</a>
+            <a href="">Bing</a>
         </li>
     </ul>
 
 </div>
-<div class="col-30">
+<div class="col-30 custom-col ">
 <ul>
         <li>
-            <a href="">NEW SAMPLE LINK</a>
+            <a href="">Yahoo</a>
         </li>
         <li>
-            <a href="">NEW SAMPLE LINK</a>
+            <a href="">Yandex</a>
         </li>
     </ul>
 </div>
-<div class="col-30">
+<div class="col-30 custom-col">
 <ul>
         <li>
-            <a href="">NEW SAMPLE LINK</a>
+            <a href="">Facebook</a>
         </li>
         <li>
-            <a href="">NEW SAMPLE LINK</a>
+            <a href="">Twitter</a>
         </li>
     </ul>
 </div>
-<div class="col-10">
 
-</div>
 
 </footer>
 </div>

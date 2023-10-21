@@ -1,27 +1,31 @@
 <?php
-    // die();
     include 'header.php';
 
-
-    $servername = "localhost";
-    $username = "root";
-    $password = "mysql";
-    $database = "php101";
-
-    // Create connection
-    $conn = new mysqli($servername, $username, $password,$database);
-
-
-
-    // Check connection
-    if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    
+    if(!empty($_GET)){
+        $deleteID = $_GET['delid'];
+        $sql = "delete from tbl_student where id=".$deleteID;
+        $deleted = $conn->query($sql);
     }
-    else{
 
-        $sql = "SELECT * FROM tbl_student";
-        $result = $conn->query($sql);
-     }
+    if(!empty($_POST['updateID'])){
+        $sql = "Update tbl_student SET first_name ='".$_POST['fname']."' 
+        , last_name='".$_POST['lname']."'
+        , gender = '".$_POST['gender']."'
+        , address ='".$_POST['address']."'
+        , contact = '".$_POST['contact']."'
+        , email ='".$_POST['email']."' where id=".$_POST['updateID'];
+
+    
+
+        $update = $conn->query($sql);
+    
+    
+    }
+
+    $sql = "SELECT * FROM tbl_student";
+    $result = $conn->query($sql);
+     
 
     ?>
 
@@ -55,6 +59,9 @@ if($result->num_rows > 0){
             <td><?php echo $row['contact'] ?></td>
             <td>
                 <a href="edit-student.php?id=<?php echo $row['id']; ?>">Edit</a>
+            </td>
+            <td>
+                <a onclick="confirmDelete(event);" href="students.php?delid=<?php echo $row['id']; ?>">Delete</a>
             </td>
        </tr>
 

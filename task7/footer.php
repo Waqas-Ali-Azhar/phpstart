@@ -36,7 +36,17 @@
 </footer>
 </div>
 
+<script type="text/javascript">
+    function confirmDelete(event){
 
+        var userValue = confirm('Do You Reall Want to Delete this Record ?');
+        if(!userValue){
+            event.preventDefault();
+        }
+
+    }
+
+</script>
 </body>
 </html>
 

@@ -2,13 +2,6 @@
 
 include 'header.php';
 
-$servername = "localhost";
-    $username = "root";
-    $password = "mysql";
-    $database = "php101";
-
-    // Create connection
-    $conn = new mysqli($servername, $username, $password,$database);
 
 if(!empty($_GET)){
     $student_id = $_GET['id'];
@@ -21,6 +14,20 @@ if(!empty($_GET)){
     die();
    }
    $st_data = $result->fetch_assoc();
+
+   $genderMale = '';
+   $genderFemale = '';
+
+   if($st_data['gender'] == 'male'){
+      $genderMale = 'checked';
+   }
+   else{
+    $genderFemale = 'checked';
+   }
+
+//    echo '<pre>';
+//    print_r($st_data);
+   
 }
 
 ?>
@@ -43,17 +50,17 @@ if(!empty($_GET)){
     <div class="fieldgroup">
         <label>Gender</label>
         <label>Male</label>
-        <input type="radio" name="gender" value="male" />
+        <input type="radio" name="gender" value="male"  <?php echo $genderMale; ?>/>
 
         <label>Female</label>
-        <input type="radio" name="gender" value="female" />
+        <input type="radio" name="gender" value="female"  <?php echo $genderFemale; ?> />
 
         
     </div>
 
     <div class="fieldgroup">
         <label>Address</label>
-        <textarea rows="2" cols="20"><?php echo $st_data['address']; ?></textarea>
+        <textarea rows="2" cols="20" name="address"><?php echo $st_data['address']; ?></textarea>
     </div>
 
     <div class="fieldgroup">
@@ -68,6 +75,7 @@ if(!empty($_GET)){
     </div>
 
     <div class="fieldgroup">
+        <input type="hidden" name="updateID" value="<?php echo $st_data['id']; ?>" />
         <input type="submit" name="submit" value="update" class="btn-update" />
     </div>
 </form>
